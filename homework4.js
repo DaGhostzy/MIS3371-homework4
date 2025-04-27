@@ -461,11 +461,9 @@ function validateEverything() {
 
     if (valid) {
         document.getElementById("submit").disabled = false;
-        return true;
     }
     else {
         showAlert();
-        return false;
     }
 }
 
