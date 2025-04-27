@@ -468,3 +468,40 @@ function validateEverything() {
         return false;
     }
 }
+
+// setting cookies
+function setCookie(name, cvalue, expiryDays) {
+    var day = new Date();
+    day.setTime(day.getTime() + (expiryDays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + day.toUTCString();
+    document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+// getting cookies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
