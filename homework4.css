@@ -1,0 +1,283 @@
+/*
+ Name: Michael Tran
+ Date created: 4/27/2025
+ Date last edited: 4/27/2025
+ Version: 1.0
+ Description: Homework 4 CSS
+*/
+
+/*
+    References: w3schools resources
+*/
+
+header
+{
+    width: 100%;
+    background-color: rgb(14, 73, 132);
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: MediumSeaGreen;
+    margin: 0;
+    height: 100%;
+    min-height: 100vh;
+}
+
+form
+{
+    flex-grow: 1;
+}
+
+h1
+{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    flex-grow: 1;
+}
+
+h2
+{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-grow: 1;
+}
+
+main
+{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    flex-grow: 1;
+}
+
+.image
+{
+    text-align: left;
+}
+
+.td1
+{
+    text-align: right;
+    font-family: "optima", 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+th
+{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+footer 
+{
+    position: flex;
+    margin-bottom: 0;
+    width: 100%;
+    background-color: lightgray;
+    height: 2.0rem;
+}
+
+#footer
+{
+    text-align: right;
+    font-family: "optima", sans-serif;
+    font-weight: normal;
+    margin-right: 10%;
+}
+
+label
+{
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+input
+{
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+textarea
+{
+    text-align: left;
+    font-family: "optima", sans-serif;
+    font-weight: normal;
+}
+
+#today
+{
+    text-align: left;
+    font-family: "optima", 'Times New Roman', Times, serif;
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+p
+{
+    text-align: right;
+    font-family: "optima", 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+/* error messages style */
+.error
+{
+    color: crimson;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+/* password validation message style */
+.psword-message
+{
+    color: red;
+    text-align: right;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    left: 100%;
+    background: transparent;
+    padding: 10%;
+    border-spacing: 4%;
+    border-radius: 10%;
+}
+/* w3schools message container */
+
+/* review button style */
+#review
+{
+    margin-top: 8%;
+}
+
+/* output table style */
+table.output,
+tr.output,
+td.output
+{
+    color: black;
+    width: 80%;
+    background-color: maroon;
+    padding: 5%;
+    border-spacing: 4%;
+    border-radius: 10%;
+    margin: 0 auto;
+}
+
+/* style for individual cells */
+td.output
+{
+    width: auto;
+    background-color: chocolate;
+    padding: 5%;
+    border-spacing: 4%;
+    text-align: left;
+}
+
+#showInput
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* style for alert box */
+#alert-box
+{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 90px;
+    height: 90px;
+    overflow: auto;
+    background-color: red;
+}
+
+/* content area of the alert box style */
+#alert-content
+{
+    background-color: maroon;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 100px;
+    text-align: center;
+}
+
+/* heading of alert box */
+#alert-conent h4
+{
+    font-size: 100px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+/* close/OK buttom in alert box */
+#close-alert
+{
+    background-color: silver;
+    border-width: 1px;
+    border-style: solid;
+    color: black;
+    border-color: black;
+    font-size: 10px;
+    font-weight: bold;
+    height: 15px;
+    width: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* password message box style */
+ .pword-message 
+{
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    position: relative;
+    left: 20px;
+    background: transparent;
+    padding: 10px;
+    border-spacing: 10px;
+    border-radius: 10px;
+    color: red;
+}
+
+/* output table style */
+table.output,
+tr.output,
+td.output
+{
+    color: black;
+    width: 80px;
+    background-color: maroon;
+    padding: 10px;
+    border-spacing: 4px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+/* style for individual cells */
+td.outputdata
+{
+    width: auto;
+    background-color: chocolate;
+    padding: 10px;
+    border-spacing: 4px;
+    text-align: left;
+}
