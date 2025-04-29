@@ -568,7 +568,7 @@ function deleteAllCookies() {
 }
 // delete function from MISSO resources
 
-// event listner for DOM content loaded
+// event listner for DOM content loaded and "remember me" reflects on cookie behavior on page load
 document.addEventListener("DOMContentLoaded", function () {
     const rememberMe = document.getElementById("remember-me").checked;
 
