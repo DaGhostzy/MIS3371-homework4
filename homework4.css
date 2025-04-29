@@ -301,7 +301,7 @@ td.outputdata
 
 #welcome1 {
      margin-top: 15px;
-     text-aligh: 20px;
+     font-size: 20px;
      text-align: center;
      font-family: "optima", 'Times New Roman', Times, serif;
      font-weight: normal;
@@ -309,7 +309,7 @@ td.outputdata
 
 #welcome2 {
      margin-top: 15px;
-     text-aligh: 20px;
+     font-size: 20px;
      text-align: center;
      font-family: Arial, Helvetica, sans-serif;
      font-weight: normal;
