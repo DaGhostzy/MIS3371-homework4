@@ -529,14 +529,14 @@ var FirstName = getCookie("FirstName");
 if (FirstName !== "") {
     document.getElementById("welcome1").innerHTML = "Welcome back, " + FirstName + "!<br>";
     document.getElementById("welcome2").innerHTML = 
-        "<a herf= '#' id='new-user'>Not " + FirstName + "? Click here to start a bew form.</a>";
+        "<a href='#' id='new-user'>Not " + FirstName + "? Click here to start a new form.</a>";
 
     document.getElementById("new-user").addEventListener("click", function () {
         inputs.forEach(function (input) {
             setCookie(input.cookieName, "", -1);
-        })
+        });
         location.reload();
-    })
+    });
 }
 
 // Remember me checkbox integration, event listener for remember me
