@@ -467,6 +467,7 @@ function validateEverything() {
     }
 }
 
+
 // setting cookies
 function setCookie(name, cvalue, expiryDays) {
     var day = new Date();
@@ -474,10 +475,89 @@ function setCookie(name, cvalue, expiryDays) {
     var expires = "expires=" + day.toUTCString();
     document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
 }
+// From MISSO resources
 
 // getting cookies
+function getCookie(name) {
+    var cookieName = name + "=";
+    var cookies = document.cookie.split(';');
 
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.indexOf(cookieName) == 0) {
+            return cookie.substring(cookieName.length, cookie.length);
+        }
+    }
+    return "";
+}
 
+var inputs = [
+    {id:"FirstName", cookieName: "FirstName"},
+    
+    
+
+inputs.forEach(function (input) {
+    var inputElement = document.getElementById(input.id);
+
+    // Prefill input fields
+    var cookieValue = getCookie(input.cookieName);
+    if (cookieValue !== "") {
+        inputElement.value = cookieValue;
+    }
+
+    // Set a cookie when the input field changes
+    inputElement.addEventListener("input", function () {
+        setCookie(input.cookieName, inputElement.value, 30);
+    });
+});
+// event listener for input fields from MISSO resources
+
+// Welcome message using cookies
+var FirstName = getCookie("FirstName");
+if (FirstName !== "") {
+    document.getElementById("welcome1").innerHTML = "Welcome back, " + FirstName + "!<br>";
+    document.getElementById("welcome2").innerHTML = 
+        "<a herf= '#' id='new-user'>Not " + FirstName + "? Click here to start a bew form.</a>";
+
+    document.getElementById("new-user").addEventListener("click", function () {
+        inputs.forEach(function (input) {
+            setCookie(input.cookieName, "", -1);
+        });
+        location.reload();
+    });
+}
+
+// Remember me checkbox integration, event listener for remember me
+document.getElementById("remember-me").addEventListener("change", function () {
+    const rememberMe = this.checked;
+
+    if (!rememberMe) {
+        // If "remember me" is unchecked, delete cookies
+        deletAllCookies();
+        console.log("All cookies deleted becasue 'Remember Me' button is unchecked.");
+    } 
+    else {
+        // If "remember me" is checked or rechecked, save cookies
+        inputs.forEach(function (input) {
+            const inputElement = document.getElementById(input.id);
+            if (inputElement.value.trim() !== "") {
+                setCookie(innput.cookieName, inputElement.value, 30);
+            }
+        });
+        console.log("Cookies saved because 'Remember Me' is checked.");
+    }
+});
+// event listener from MISSO resources
+
+// deleting all cookies
+function deleteAllCookies() {
+    document.cookie.split(";").forEach(function (cookie) {
+        let eqPos = cookie.indexOf("=");
+        let name = eqPos > -1? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
+    });
+}
+// delete function from MISSO resources
 
 
 
