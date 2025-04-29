@@ -281,3 +281,37 @@ td.outputdata
     border-spacing: 4px;
     text-align: left;
 }
+
+/* iframe */
+.iframe-container {
+     position: absolute;
+     top: 25%;
+     right: 15px;
+     width: 20px;
+     height: 100%;
+     overflow: hidden;
+     box-sizing: border-box;
+}
+
+.iframe-container iframe {
+     width: 90%;
+     height: 25%;
+     border: 1px solid black;
+}
+
+#welcome1 {
+     margin-top: 15px;
+     text-aligh: 20px;
+     text-align: center;
+     font-family: "optima", 'Times New Roman', Times, serif;
+     font-weight: normal;
+}
+
+#welcome2 {
+     margin-top: 15px;
+     text-aligh: 20px;
+     text-align: center;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: normal;
+}
+
