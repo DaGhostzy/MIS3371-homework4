@@ -493,8 +493,17 @@ function getCookie(name) {
 
 var inputs = [
     {id:"FirstName", cookieName: "FirstName"},
-    
-    
+    {id:"MiddleInitial", cookieName: "MiddleInitial"},
+    {id:"LastName", cookieName: "LastName"},
+    {id:"dob", cookieName: "dob"},
+    {id:"ssn", cookieName: "ssn"},
+    {id:"Address1", cookieName: "Address1"},
+    {id:"City", cookieName: "City"},
+    {id:"Zipcode", cookieName: "Zipcode"},
+    {id:"Email", cookieName: "Email"},
+    {id:"PhoneNumber", cookieName: "PhoneNumber"},
+    {id:"usid", cookieName: "usid"},
+]
 
 inputs.forEach(function (input) {
     var inputElement = document.getElementById(input.id);
@@ -505,7 +514,7 @@ inputs.forEach(function (input) {
         inputElement.value = cookieValue;
     }
 
-    // Set a cookie when the input field changes
+    // Set a cookie when the input fields
     inputElement.addEventListener("input", function () {
         setCookie(input.cookieName, inputElement.value, 30);
     });
@@ -553,33 +562,17 @@ document.getElementById("remember-me").addEventListener("change", function () {
 function deleteAllCookies() {
     document.cookie.split(";").forEach(function (cookie) {
         let eqPos = cookie.indexOf("=");
-        let name = eqPos > -1? cookie.substr(0, eqPos) : cookie;
+        let name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
         document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
     });
 }
 // delete function from MISSO resources
 
+// event listner for DOM content loaded
+document.addEventListener("DOMContentLoaded", function () {
+    const rememberMe = document.getElementById("remember-me").checked;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    if (!rememberMe) {
+        deleteAllCookies():
+    }
+});
