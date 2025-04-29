@@ -484,6 +484,9 @@ function getCookie(name) {
 
     for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i].trim();
+        while (cookie.charAt (0) == ' ') {
+            cookie = cookie.substring(1);
+        }
         if (cookie.indexOf(cookieName) == 0) {
             return cookie.substring(cookieName.length, cookie.length);
         }
@@ -531,9 +534,9 @@ if (FirstName !== "") {
     document.getElementById("new-user").addEventListener("click", function () {
         inputs.forEach(function (input) {
             setCookie(input.cookieName, "", -1);
-        });
+        })
         location.reload();
-    });
+    })
 }
 
 // Remember me checkbox integration, event listener for remember me
