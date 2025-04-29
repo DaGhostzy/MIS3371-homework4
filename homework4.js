@@ -553,7 +553,7 @@ document.getElementById("remember-me").addEventListener("change", function () {
         inputs.forEach(function (input) {
             const inputElement = document.getElementById(input.id);
             if (inputElement.value.trim() !== "") {
-                setCookie(innput.cookieName, inputElement.value, 30);
+                setCookie(input.cookieName, inputElement.value, 30);
             }
         });
         console.log("Cookies saved because 'Remember Me' is checked.");
@@ -576,6 +576,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const rememberMe = document.getElementById("remember-me").checked;
 
     if (!rememberMe) {
-        deleteAllCookies():
+        deleteAllCookies();
     }
 });
